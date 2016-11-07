@@ -51,11 +51,9 @@
 							//need to update this to allow specific filetypes rather than brute forcing it
 							if(file_exists('slides/'.$v.'/'.$i.'.png')){
 								echo ('<section class="'.$x.'-size"><span>'.$x.'</span><span class="ov">'.strtoupper(substr($x,0,1)).'-'.$i.'</span><img src="slides/'.$v.'/'.$i.'.png"/></section>');
-							}
-							if(file_exists('slides/'.$v.'/'.$i.'.gif')){
+							}else if(file_exists('slides/'.$v.'/'.$i.'.gif')){
 								echo ('<section class="'.$x.'-size"><span>'.$x.'</span><span class="ov">'.strtoupper(substr($x,0,1)).'-'.$i.'</span><img src="slides/'.$v.'/'.$i.'.gif"/></section>');
-							}
-							if(file_exists('slides/'.$v.'/'.$i.'.jpg')){
+							}else if(file_exists('slides/'.$v.'/'.$i.'.jpg')){
 								echo ('<section class="'.$x.'-size"><span>'.$x.'</span><span class="ov">'.strtoupper(substr($x,0,1)).'-'.$i.'</span><img src="slides/'.$v.'/'.$i.'.jpg"/></section>');
 							}
 						}
